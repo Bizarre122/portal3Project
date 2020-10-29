@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1 &8282077917911401275
+=======
+--- !u!1 &5635231014101254431
+>>>>>>> 09cdd2c4bdd99e4deedbfebf2eb4be5730f772e5
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +12,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 8282077917911401273}
   - component: {fileID: 8282077917911401272}
   - component: {fileID: 643614217104478058}
+=======
+  - component: {fileID: 2434733763158980586}
+  - component: {fileID: 6846385133432340487}
+  - component: {fileID: 4588263171100261363}
+>>>>>>> 09cdd2c4bdd99e4deedbfebf2eb4be5730f772e5
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -18,27 +28,45 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &8282077917911401273
+=======
+--- !u!4 &2434733763158980586
+>>>>>>> 09cdd2c4bdd99e4deedbfebf2eb4be5730f772e5
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 8282077917911401275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5497438, y: 0.039625168, z: 0}
+=======
+  m_GameObject: {fileID: 5635231014101254431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.5360832, y: -3.4898503, z: 0}
+>>>>>>> 09cdd2c4bdd99e4deedbfebf2eb4be5730f772e5
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!212 &8282077917911401272
+=======
+--- !u!212 &6846385133432340487
+>>>>>>> 09cdd2c4bdd99e4deedbfebf2eb4be5730f772e5
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 8282077917911401275}
+=======
+  m_GameObject: {fileID: 5635231014101254431}
+>>>>>>> 09cdd2c4bdd99e4deedbfebf2eb4be5730f772e5
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -83,13 +111,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!61 &643614217104478058
+=======
+--- !u!61 &4588263171100261363
+>>>>>>> 09cdd2c4bdd99e4deedbfebf2eb4be5730f772e5
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 8282077917911401275}
+=======
+  m_GameObject: {fileID: 5635231014101254431}
+>>>>>>> 09cdd2c4bdd99e4deedbfebf2eb4be5730f772e5
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
