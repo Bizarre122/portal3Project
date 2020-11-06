@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6917705955830584694}
   - component: {fileID: 257075240061603181}
   - component: {fileID: 6652053669692094229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Portalable Surface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
