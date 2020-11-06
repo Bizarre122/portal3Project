@@ -39,6 +39,7 @@ public class InputController : MonoBehaviour
         Jump();
         CheckIfGrounded();
         BetterJump();
+        PortalRay();
     }
 
     void FixedUpdate()
@@ -89,5 +90,9 @@ public class InputController : MonoBehaviour
         {
             rb2d.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
+    }
+    void PortalRay()
+    {
+
     }
 }
