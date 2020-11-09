@@ -35,10 +35,8 @@ namespace CodeMonkey {
 
 
         // All references
-        
-        public Sprite s_White;
-        public Sprite s_Circle;
 
+        public Sprite s_White;
         public Material m_White;
 
     }
