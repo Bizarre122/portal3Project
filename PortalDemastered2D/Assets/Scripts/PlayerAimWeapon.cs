@@ -14,6 +14,8 @@ public class PlayerAimWeapon : MonoBehaviour
         public Vector3 shootPosition;
     }
 
+    public GameObject OrangePortal;
+    public GameObject BluePortal;
     private Transform aimTransform;
     private Transform aimGunEndPointTransform;
     private Transform aimShellPositionTransform;
@@ -58,32 +60,81 @@ public class PlayerAimWeapon : MonoBehaviour
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         aimTransform.eulerAngles = new Vector3(0, 0, angle);
 
-        Debug.DrawRay(aimGunEndPointTransform.position, aimDirection * 10, Color.yellow);
-        RaycastHit2D hit = Physics2D.Linecast(aimGunEndPointTransform.position, mousePosition);
-
-        if(hit.collider != null)
-        {
-            Debug.Log("Hit");
-        }
+        //Debug.DrawRay(aimGunEndPointTransform.position, aimDirection * 10, Color.yellow);
     }
+        
 
     private void HandleShooting()
     {
+        var mousePos = Input.mousePosition;
+        mousePos.z = 10;
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(mousePos);
+        Vector3 aimDirection = (mousePosition - transform.position).normalized;
+        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+        aimTransform.eulerAngles = new Vector3(0, 0, angle);
+
+        Quaternion myAngle = new Quaternion(0, 0, angle, 0);
         if (Input.GetMouseButtonDown(0))
         {
-            var mousePos = Input.mousePosition;
-            mousePos.z = 10;
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(mousePos);
-            Vector3 aimDirection = (mousePosition - transform.position).normalized;
 
-            Vector3 forward = aimDirection;
+            RaycastHit2D hit = Physics2D.Linecast(aimGunEndPointTransform.position, mousePosition);
 
-            RaycastHit hit;
-
-            if(Physics.Raycast(aimTransform.position, forward, out hit, Mathf.Infinity))
+            if(hit.collider != null)
             {
-                Debug.Log("Did hit");
+                Vector2 portalPosition = hit.point;
+                Debug.Log("Hit");
+                Debug.Log(hit.fraction);
+                Debug.DrawRay(aimGunEndPointTransform.position, aimDirection * hit.distance, Color.yellow);
+                if (GameObject.Find("BluePortal(Clone)") != null)
+                {
+                    GameObject clone = GameObject.Find("BluePortal(Clone)");
+                    Destroy(clone.gameObject);
+                    Instantiate(BluePortal, portalPosition, myAngle);
+
+                }
+                else
+                {
+                    Instantiate(BluePortal, portalPosition, myAngle);
+                }
             }
+
+            
+
+
+            aimAnimator.SetTrigger("Shoot");
+            OnShoot?.Invoke(this, new OnShootEventArgs
+            {
+                gunEndPointPosition = aimGunEndPointTransform.position,
+                shootPosition = mousePosition,
+            });
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+
+            RaycastHit2D hit = Physics2D.Linecast(aimGunEndPointTransform.position, mousePosition);
+
+            if (hit.collider != null)
+            {
+                Debug.Log("Hit");
+                Vector2 portalPosition = hit.point;
+                Debug.Log("Hit");
+                Debug.Log(hit.fraction);
+                Debug.DrawRay(aimGunEndPointTransform.position, aimDirection * hit.distance, Color.yellow);
+                if (GameObject.Find("OrangePortal(Clone)") != null)
+                {
+                    GameObject clone = GameObject.Find("OrangePortal(Clone)");
+                    Destroy(clone.gameObject);
+                    Instantiate(OrangePortal, portalPosition, myAngle);
+
+                }
+                else
+                {
+                    Instantiate(OrangePortal, portalPosition, myAngle);
+                }
+            }
+
+
 
 
             aimAnimator.SetTrigger("Shoot");
