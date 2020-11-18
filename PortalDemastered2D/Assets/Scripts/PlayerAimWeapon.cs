@@ -14,6 +14,9 @@ public class PlayerAimWeapon : MonoBehaviour
         public Vector3 shootPosition;
     }
 
+
+    public GameObject OrangeToBlueWaypoint;
+    public GameObject BlueToOrangeWaypoint;
     public GameObject OrangePortal;
     public GameObject BluePortal;
     private Transform aimTransform;
@@ -88,13 +91,20 @@ public class PlayerAimWeapon : MonoBehaviour
                 if (GameObject.Find("BluePortal(Clone)") != null)
                 {
                     GameObject clone = GameObject.Find("BluePortal(Clone)");
+                    GameObject waypointClone = GameObject.Find("OrangeToBlueWaypoint(Clone)");
                     Destroy(clone.gameObject);
-                    Instantiate(BluePortal, portalPosition, myAngle);
+                    Destroy(waypointClone.gameObject);
+                    GameObject BluePortalNew = Instantiate(BluePortal, portalPosition, myAngle);
+                    GameObject OrangeToBlueWayPoint = Instantiate(OrangeToBlueWaypoint, portalPosition, myAngle);
+                    OrangeToBlueWayPoint.transform.parent = BluePortalNew.transform;
+
 
                 }
                 else
                 {
-                    Instantiate(BluePortal, portalPosition, myAngle);
+                    GameObject BluePortalNew = Instantiate(BluePortal, portalPosition, myAngle);
+                    GameObject OrangeToBlueWayPoint = Instantiate(OrangeToBlueWaypoint, portalPosition, myAngle);
+                    OrangeToBlueWayPoint.transform.parent = BluePortalNew.transform;
                 }
             }
 
@@ -124,13 +134,18 @@ public class PlayerAimWeapon : MonoBehaviour
                 if (GameObject.Find("OrangePortal(Clone)") != null)
                 {
                     GameObject clone = GameObject.Find("OrangePortal(Clone)");
+                    GameObject waypointClone = GameObject.Find("BlueToOrangeWaypoint(Clone)");
                     Destroy(clone.gameObject);
-                    Instantiate(OrangePortal, portalPosition, myAngle);
-
+                    Destroy(waypointClone);
+                    GameObject OrangePortalNew = Instantiate(OrangePortal, portalPosition, myAngle);
+                    GameObject NewBlueToOrangeWaypoint = Instantiate(BlueToOrangeWaypoint, portalPosition, myAngle);
+                    NewBlueToOrangeWaypoint.transform.parent = OrangePortalNew.transform;
                 }
                 else
                 {
-                    Instantiate(OrangePortal, portalPosition, myAngle);
+                    GameObject OrangePortalNew = Instantiate(OrangePortal, portalPosition, myAngle);
+                    GameObject NewBlueToOrangeWaypoint = Instantiate(BlueToOrangeWaypoint, portalPosition, myAngle);
+                    NewBlueToOrangeWaypoint.transform.parent = OrangePortalNew.transform;
                 }
             }
 
