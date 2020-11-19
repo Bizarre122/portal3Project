@@ -82,7 +82,7 @@ public class PlayerAimWeapon : MonoBehaviour
 
             RaycastHit2D hit = Physics2D.Linecast(aimGunEndPointTransform.position, mousePosition);
 
-            if(hit.collider != null)
+            if(hit.collider != null && hit.collider.tag == "PortalableSurface")
             {
                 Vector2 portalPosition = hit.point;
                 Debug.Log("Hit");
@@ -124,7 +124,7 @@ public class PlayerAimWeapon : MonoBehaviour
 
             RaycastHit2D hit = Physics2D.Linecast(aimGunEndPointTransform.position, mousePosition);
 
-            if (hit.collider != null)
+            if (hit.collider != null && hit.collider.tag == "PortalableSurface")
             {
                 Debug.Log("Hit");
                 Vector2 portalPosition = hit.point;
