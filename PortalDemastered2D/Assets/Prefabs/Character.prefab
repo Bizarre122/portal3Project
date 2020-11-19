@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 8206993043223506047}
   - component: {fileID: -5406369878468546213}
   - component: {fileID: -1455253198509274377}
+  - component: {fileID: -278464278618104316}
+  - component: {fileID: 6434713207488814883}
+  - component: {fileID: -8653929707487607909}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -131,3 +134,56 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-278464278618104316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6910250129829783882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042519ce54da0ce4caec0d52f76e2270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OrangeToBlueWaypoint: {fileID: 208200948635414147, guid: b1c8a1570d7b8f84da50e6f1d7e89629,
+    type: 3}
+  BlueToOrangeWaypoint: {fileID: 4850165131936071325, guid: 292687ef00a9da04c90975ce05527097,
+    type: 3}
+  OrangePortal: {fileID: 2476505425928011456, guid: 29ff04bbc826f4d41a96740dfb8d0991,
+    type: 3}
+  BluePortal: {fileID: 2492669245327937164, guid: b972e68eb985b3d408a8e1db33538d50,
+    type: 3}
+--- !u!114 &6434713207488814883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6910250129829783882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8e8043b69e82c45b11a5e7224601d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  jumpForce: 0
+  isGroundedChecker: {fileID: 0}
+  checkGroundRadius: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
+--- !u!114 &-8653929707487607909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6910250129829783882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6dad2afdc2f5524b83a2fcca4cd9461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
