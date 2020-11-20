@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2380599962943931920}
   - component: {fileID: 2380599962943931925}
   - component: {fileID: 2380599962943931926}
-  - component: {fileID: -716226165113231392}
   m_Layer: 0
   m_Name: CompanionSquare
   m_TagString: Untagged
@@ -132,16 +131,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-716226165113231392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380599962943931921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021d04fd68cd1884fa3a7d98fe93c04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  door: {fileID: 0}
