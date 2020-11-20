@@ -121,7 +121,7 @@ public class PlayerAimWeapon : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-
+            Debug.Log("Shot");
             RaycastHit2D hit = Physics2D.Linecast(aimGunEndPointTransform.position, mousePosition);
 
             if (hit.collider != null && hit.collider.tag == "PortalableSurface")
